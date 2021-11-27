@@ -1,0 +1,17 @@
+.header {
+  &__image {
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 4px 1px hsla(0, 0%, 100%, 0.08);
+  }
+
+  //bootstrap
+  .dropdown-toggle {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .dropdown-toggle::after {
+    vertical-align: middle;
+  }
+}
