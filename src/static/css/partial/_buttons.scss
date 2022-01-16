@@ -1,0 +1,30 @@
+.btn-primary {
+  background-color: var(--app-primary);
+  border-color: var(--app-primary);
+}
+
+.btn-primary:hover {
+  background-color: hsl(0, 20%, 16%);
+  border-color: hsl(0, 20%, 16%);
+  color: #fff;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem hsla(0, 20%, 16%, 0.25);
+}
+
+.btn-contrast {
+  background-color: var(--app-contrast);
+  border-color: var(--app-contrast);
+  color: #fff;
+}
+
+.btn-contrast:hover {
+  background-color: hsl(355, 95%, 34%);
+  border-color: hsl(355, 95%, 34%);
+  color: #fff;
+}
+
+.btn-contrast:focus {
+  box-shadow: 0 0 0 0.25rem hsla(355, 95%, 34%, 0.25);
+}
