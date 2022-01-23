@@ -1,0 +1,8 @@
+.horizontal-image {
+  height: 400px;
+  background-attachment: fixed;
+
+  @media screen and (min-width: 576px) {
+    height: 600px;
+  }
+}

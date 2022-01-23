@@ -1,0 +1,13 @@
+.description {
+  &__content {
+    text-align: justify;
+  }
+
+  @media screen and (min-width: 992px) {
+    &__image {
+      float: left;
+      max-width: 50%;
+      margin: 0 2rem 1rem 0;
+    }
+  }
+}

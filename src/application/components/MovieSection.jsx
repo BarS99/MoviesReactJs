@@ -8,7 +8,7 @@ const MovieList = (props) => {
   return (
     <div className="container my-4">
       <section className="movie__section">
-        <h2 className="text-white fw-bold mb-4">Movie list</h2>
+        <h2 className="text-white fw-bold mb-4">Recently added</h2>
         {!loadFailed ? (
           <>
             {movies.length === 0 ? (
@@ -21,7 +21,10 @@ const MovieList = (props) => {
               <div className="row gy-4">
                 {movies.map((item) => {
                   return (
-                    <div className="col-6 col-md-4 col-lg-3" key={item.id}>
+                    <div
+                      className="col-6 col-md-4 col-lg-3 d-flex"
+                      key={item.id}
+                    >
                       <Media media={item} />
                     </div>
                   );

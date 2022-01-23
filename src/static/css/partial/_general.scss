@@ -2,6 +2,12 @@ body {
   background-color: #000;
 }
 
+.App {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 //bg colors
 .bg-app-primary {
   background-color: var(--app-primary);

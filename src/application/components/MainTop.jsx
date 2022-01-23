@@ -6,7 +6,7 @@ const MainTop = () => {
     image_lg: "images/mainTop/red_seats_992.jpg",
     image_full: "images/mainTop/red_seats_1920.jpg",
     alt: "People watching a movie in the cinema",
-    title: "How the coronavirus hit cinema",
+    title: "How the coronavirus hit cinemas",
     link: "https://www.google.pl/",
   });
 

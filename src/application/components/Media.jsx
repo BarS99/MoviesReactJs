@@ -4,9 +4,9 @@ import { Card, Button } from "react-bootstrap";
 const Media = ({ media }) => {
   return (
     <Card className="media">
-      <Card.Img src={media.thumbnail}></Card.Img>
-      <Card.Body>
-        <Card.Title>{media.title}</Card.Title>
+      <Card.Img src={media.thumbnail} />
+      <Card.Body className="d-flex flex-column">
+        <Card.Title className="flex-grow-1">{media.title}</Card.Title>
         <Button variant="primary" className="mt-2">
           See more
         </Button>
