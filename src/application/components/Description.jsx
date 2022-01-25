@@ -1,10 +1,11 @@
 import React from "react";
 import team600 from "../../static/images/team_600.jpg";
 import team1200 from "../../static/images/team_1200.jpg";
+import { Container } from "react-bootstrap";
 
 const Description = () => {
   return (
-    <div className="container my-5">
+    <Container className="my-5">
       <section className="description text-white">
         <h2 className="text-white fw-bold mb-4">A few words about us</h2>
         <div className="description__image mb-4">
@@ -44,7 +45,7 @@ const Description = () => {
           gravida purus. Aliquam efficitur tincidunt aliquet.
         </div>
       </section>
-    </div>
+    </Container>
   );
 };
 

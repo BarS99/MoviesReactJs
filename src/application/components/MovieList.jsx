@@ -1,46 +1,40 @@
 import React, { useContext } from "react";
 import { MovieContext } from "../contexts/MovieContext";
 import Media from "./Media";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 
 const MovieList = (props) => {
   const { movies, loadFailed } = useContext(MovieContext);
 
   return (
-    <div className="container my-4">
+    <Container className="container my-4">
       <section className="movie__section">
-        <h2 className="text-white fw-bold mb-4">Recently added</h2>
+        <h2 className="text-white fw-bold mb-4">{props.title}</h2>
         {!loadFailed ? (
           <>
             {movies.length === 0 ? (
               <div className="my-5">
-                <div className="alert alert-primary" role="alert">
-                  The movie list is empty!
-                </div>
+                <Alert variant="primary">The movie list is empty!</Alert>
               </div>
             ) : (
-              <div className="row gy-4">
+              <Row className="gy-4">
                 {movies.map((item) => {
                   return (
-                    <div
-                      className="col-6 col-md-4 col-lg-3 d-flex"
-                      key={item.id}
-                    >
+                    <Col md="4" lg="3" className="d-flex" key={item.id}>
                       <Media media={item} />
-                    </div>
+                    </Col>
                   );
                 })}
-              </div>
+              </Row>
             )}
           </>
         ) : (
           <div className="my-5">
-            <div className="alert alert-primary" role="alert">
-              Failed to load the movies!
-            </div>
+            <Alert variant="primary">Failed to load the movies!</Alert>
           </div>
         )}
       </section>
-    </div>
+    </Container>
   );
 };
 

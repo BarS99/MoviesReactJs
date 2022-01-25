@@ -1,164 +1,262 @@
 {
+  "genres": [
+    {
+      "id": 1,
+      "title": "action"
+    },
+    {
+      "id": 2,
+      "title": "adventure"
+    },
+    {
+      "id": 3,
+      "title": "comedy"
+    },
+    {
+      "id": 4,
+      "title": "drama"
+    },
+    {
+      "id": 5,
+      "title": "family"
+    },
+    {
+      "id": 6,
+      "title": "musical"
+    },
+    {
+      "id": 7,
+      "title": "sport"
+    },
+    {
+      "id": 8,
+      "title": "thriller"
+    }
+  ],
   "movies": [
     {
       "id": 1,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 2,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 3,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 4,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 5,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 6,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 7,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 8,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 9,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 10,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 11,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 12,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 13,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 14,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 15,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 16,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 17,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 18,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 19,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 20,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 21,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 22,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 23,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 24,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 25,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 26,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 27,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 28,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 29,
       "thumbnail": "images/movies/sing-2-movie-poster.jpg",
-      "title": "Sing 2"
+      "title": "Sing 2",
+      "genres": ["animation", "adventure", "comedy", "family", "musical"],
+      "director": "Garth Jennings"
     },
     {
       "id": 30,
       "thumbnail": "images/movies/the-355-movie-poster.jpg",
-      "title": "The 355"
+      "title": "The 355",
+      "genres": ["action", "thriller"],
+      "director": "Simon Kinberg"
     },
     {
       "id": 31,
       "thumbnail": "images/movies/the-kings-man-movie-poster.jpg",
-      "title": "The King's Man"
+      "title": "The King's Man",
+      "genres": ["action", "adventure", "thriller"],
+      "director": "Andrew Erwin"
     },
     {
       "id": 32,
       "thumbnail": "images/movies/american-underdog-movie-poster.jpg",
-      "title": "American Underdog"
+      "title": "American Underdog",
+      "genres": ["biography", "drama", "sport"],
+      "director": "Andrew Erwin"
     }
   ]
 }

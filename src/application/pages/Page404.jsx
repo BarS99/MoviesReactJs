@@ -1,12 +1,11 @@
 import React from "react";
+import { Container, Alert } from "react-bootstrap";
 
 const Page404 = () => {
   return (
-    <div className="container my-5">
-      <div className="alert alert-primary" role="alert">
-        404 Not found!
-      </div>
-    </div>
+    <Container className="my-5">
+      <Alert variant="primary">404 Not found!</Alert>
+    </Container>
   );
 };
 

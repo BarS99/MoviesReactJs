@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 
 const MainTop = () => {
   const [mainTop] = useState({
@@ -21,7 +22,7 @@ const MainTop = () => {
         />
       </div>
       <div className="mainTop__content position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center">
-        <div className="container">
+        <Container>
           <h2 className="mainTop__title text-light display-4 fw-bold">
             {mainTop.title}
           </h2>
@@ -32,7 +33,7 @@ const MainTop = () => {
           >
             See more
           </a>
-        </div>
+        </Container>
       </div>
     </section>
   );

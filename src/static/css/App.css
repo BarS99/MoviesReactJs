@@ -29,6 +29,9 @@ body {
   border-color: var(--app-contrast) !important;
 }
 
+.header {
+  z-index: 1000;
+}
 .header__image {
   width: 2rem;
   height: 2rem;

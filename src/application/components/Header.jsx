@@ -54,7 +54,7 @@ const Header = () => {
   });
 
   return (
-    <header className="header">
+    <header className="header position-sticky top-0 w-100">
       <Navbar collapseOnSelect expand="lg" bg="app-primary" variant="dark">
         <Container>
           <Navbar.Brand as={NavLink} to="/" className="order-first">
