@@ -22,14 +22,18 @@
     },
     {
       "id": 6,
-      "title": "musical"
+      "title": "horror"
     },
     {
       "id": 7,
-      "title": "sport"
+      "title": "musical"
     },
     {
       "id": 8,
+      "title": "sport"
+    },
+    {
+      "id": 9,
       "title": "thriller"
     }
   ],
@@ -257,6 +261,36 @@
       "title": "American Underdog",
       "genres": ["biography", "drama", "sport"],
       "director": "Andrew Erwin"
+    }
+  ],
+  "series": [
+    {
+      "id": 1,
+      "thumbnail": "images/series/breaking-bad-series-poster.jpg",
+      "title": "Breaking bad",
+      "genres": ["crime", "drama", "thriller"],
+      "director": "Vince Gilligan"
+    },
+    {
+      "id": 2,
+      "thumbnail": "images/series/better-call-saul-series-poster.jpg",
+      "title": "Better Call Saul",
+      "genres": ["crime", "drama"],
+      "director": "Vince Gilligan"
+    },
+    {
+      "id": 3,
+      "thumbnail": "images/series/the-walking-dead-series-poster.jpg",
+      "title": "The Walking Dead",
+      "genres": ["drama", "horror", "thriller"],
+      "director": "Frank Darabont"
+    },
+    {
+      "id": 4,
+      "thumbnail": "images/series/the-wire-series-poster.jpg",
+      "title": "The Wire",
+      "genres": ["crime", "drama", "thriller"],
+      "director": "David Simon"
     }
   ]
 }

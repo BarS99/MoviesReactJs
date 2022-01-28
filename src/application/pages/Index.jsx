@@ -1,7 +1,7 @@
 import React from "react";
 import MainTop from "../components/MainTop";
-import MovieList from "../components/MovieList";
-import { MovieProvider } from "../contexts/MovieContext";
+import MediaList from "../components/MediaList";
+import { MediaProvider } from "../contexts/MediaContext";
 import HorizontalImage from "../components/HorizontalImage";
 import Description from "../components/Description.jsx";
 
@@ -9,9 +9,12 @@ const Index = () => {
   return (
     <>
       <MainTop />
-      <MovieProvider filters={{ limit: 12 }}>
-        <MovieList title="Recently added" />
-      </MovieProvider>
+      <MediaProvider filters={{ limit: 12 }} data="movies">
+        <MediaList title="Recently added movies" />
+      </MediaProvider>
+      <MediaProvider filters={{ limit: 12 }} data="series">
+        <MediaList title="Recently added series" />
+      </MediaProvider>
       <HorizontalImage />
       <Description />
     </>

@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { MovieContext } from "../contexts/MovieContext";
+import { MediaContext } from "../contexts/MediaContext";
 import Media from "./Media";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 
-const MovieList = (props) => {
-  const { movies, loadFailed } = useContext(MovieContext);
+const MediaList = (props) => {
+  const { media, loadFailed } = useContext(MediaContext);
 
   return (
     <Container className="container my-4">
@@ -12,13 +12,13 @@ const MovieList = (props) => {
         <h2 className="text-white fw-bold mb-4">{props.title}</h2>
         {!loadFailed ? (
           <>
-            {movies.length === 0 ? (
+            {media.length === 0 ? (
               <div className="my-5">
                 <Alert variant="primary">The movie list is empty!</Alert>
               </div>
             ) : (
               <Row className="gy-4">
-                {movies.map((item) => {
+                {media.map((item) => {
                   return (
                     <Col md="4" lg="3" className="d-flex" key={item.id}>
                       <Media media={item} />
@@ -30,7 +30,7 @@ const MovieList = (props) => {
           </>
         ) : (
           <div className="my-5">
-            <Alert variant="primary">Failed to load the movies!</Alert>
+            <Alert variant="primary">Failed to load the data!</Alert>
           </div>
         )}
       </section>
@@ -38,4 +38,4 @@ const MovieList = (props) => {
   );
 };
 
-export default MovieList;
+export default MediaList;

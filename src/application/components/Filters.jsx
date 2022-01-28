@@ -1,17 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import { GenreContext } from "../contexts/GenreContext";
-import { MovieContext } from "../contexts/MovieContext";
+import { MediaContext } from "../contexts/MediaContext";
 import { Form } from "react-bootstrap";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Filters = (props) => {
   const { genres } = useContext(GenreContext);
-  const { filters, setFilters } = useContext(MovieContext);
+  const { filters, setFilters } = useContext(MediaContext);
 
   return (
     <Container>
       <Form
-        className="my-4 p-4 bg-light rounded"
+        className="my-4 px-4 pb-4 bg-light rounded"
         onSubmit={(e) => {
           e.preventDefault();
           const data = new FormData(e.target);
@@ -28,30 +28,33 @@ const Filters = (props) => {
         }}
       >
         <Row>
-          <Col sm={6} md={4} lg={3}>
-            <Form.Group controlId="movie_title">
+          <Col sm={6} md={4} className="mt-4">
+            <Form.Group controlId="title">
               <Form.Label className="fw-bold fs-5">Title</Form.Label>
               <Form.Control
                 type="text"
-                name="movie_title"
+                name="title"
                 placeholder="Search for a title"
               />
             </Form.Group>
           </Col>
-          <Col sm={6} md={4} lg={3}>
-            <Form.Group controlId="movie_director">
+          <Col sm={6} md={4} className="mt-4">
+            <Form.Group controlId="director">
               <Form.Label className="fw-bold fs-5">Director</Form.Label>
               <Form.Control
                 type="text"
-                name="movie_director"
+                name="director"
                 placeholder="Search for a director"
               />
             </Form.Group>
           </Col>
-          <Col sm={6} md={4} lg={3}>
-            <Form.Group controlId="movie_genre">
+          <Col sm={6} md={4} className="mt-4">
+            <Form.Group controlId="genre">
               <Form.Label className="fw-bold fs-5">Genre</Form.Label>
-              <Form.Select name="movie_genre">
+              <Form.Select name="genre" defaultValue="">
+                <option value="" disabled hidden>
+                  select...
+                </option>
                 {genres.map((item) => {
                   return (
                     <option key={item.id}>
@@ -62,9 +65,16 @@ const Filters = (props) => {
               </Form.Select>
             </Form.Group>
           </Col>
-          <Col sm={6} md={4} lg={3} className="d-flex align-items-end">
+        </Row>
+        <Row className="justify-content-center">
+          <Col sm={6} md={4} className="d-flex align-items-end mt-4">
             <Button type="submit" variant="danger" className="w-100">
               Apply filters
+            </Button>
+          </Col>
+          <Col sm={6} md={4} className="d-flex align-items-end mt-4">
+            <Button type="reset" variant="secondary" className="w-100">
+              Reset filters
             </Button>
           </Col>
         </Row>

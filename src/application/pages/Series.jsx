@@ -4,15 +4,15 @@ import { GenreProvider } from "../contexts/GenreContext";
 import Filters from "../components/Filters";
 import MediaList from "../components/MediaList";
 
-const Media = () => {
+const Series = () => {
   return (
     <GenreProvider>
-      <MediaProvider data="movies">
+      <MediaProvider data="series">
         <Filters />
-        <MediaList title="All movies" />
+        <MediaList title="All series" />
       </MediaProvider>
     </GenreProvider>
   );
 };
 
-export default Media;
+export default Series;

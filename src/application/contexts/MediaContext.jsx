@@ -1,10 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
 import { API } from "../../API/definitions.js";
 
-export const MovieContext = createContext();
+export const MediaContext = createContext();
 
-export const MovieProvider = (props) => {
-  const [movies, setMovies] = useState([]);
+export const MediaProvider = (props) => {
+  const [media, setMedia] = useState([]);
   const [loadFailed, setLoadFailed] = useState(false);
   const [filters, setFilters] = useState((prev) => {
     if (props.filters === undefined || props.filters === null) {
@@ -15,7 +15,7 @@ export const MovieProvider = (props) => {
   });
 
   useEffect(() => {
-    fetch(`${API}/movies`)
+    fetch(`${API}/${props.data}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -29,12 +29,31 @@ export const MovieProvider = (props) => {
             case "limit":
               response = response.slice(0, filters[filter]);
               break;
+            case "title":
+              response = response.filter((item) => {
+                return item.title
+                  .toLowerCase()
+                  .includes(filters[filter].toLowerCase());
+              });
+              break;
+            case "director":
+              response = response.filter((item) => {
+                return item.director
+                  .toLowerCase()
+                  .includes(filters[filter].toLowerCase());
+              });
+              break;
+            case "genre":
+              response = response.filter((item) => {
+                return item.genres.includes(filters[filter].toLowerCase());
+              });
+              break;
             default:
               break;
           }
         }
 
-        setMovies((movies) => {
+        setMedia((media) => {
           return [...response];
         });
       })
@@ -46,8 +65,8 @@ export const MovieProvider = (props) => {
   }, [filters]);
 
   return (
-    <MovieContext.Provider value={{ movies, loadFailed, filters, setFilters }}>
+    <MediaContext.Provider value={{ media, loadFailed, filters, setFilters }}>
       {props.children}
-    </MovieContext.Provider>
+    </MediaContext.Provider>
   );
 };
