@@ -7,7 +7,6 @@ import {
   faPhone,
   faTv,
   faUser,
-  faStar,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,11 +34,6 @@ const Header = () => {
       name: "My profile",
       to: "/my-profile",
       icon: faUser,
-    },
-    {
-      name: "Favorites",
-      to: "/favorites",
-      icon: faStar,
     },
     {
       name: "Settings",

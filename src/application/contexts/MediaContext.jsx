@@ -6,6 +6,7 @@ export const MediaContext = createContext();
 export const MediaProvider = (props) => {
   const [media, setMedia] = useState([]);
   const [loadFailed, setLoadFailed] = useState(false);
+  const [data] = useState(props.data);
   const [filters, setFilters] = useState((prev) => {
     if (props.filters === undefined || props.filters === null) {
       return [];
@@ -15,7 +16,7 @@ export const MediaProvider = (props) => {
   });
 
   useEffect(() => {
-    fetch(`${API}/${props.data}`)
+    fetch(`${API}/${data}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -62,7 +63,7 @@ export const MediaProvider = (props) => {
       });
 
     return () => {};
-  }, [filters]);
+  }, [filters, data]);
 
   return (
     <MediaContext.Provider value={{ media, loadFailed, filters, setFilters }}>
