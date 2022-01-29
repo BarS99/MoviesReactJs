@@ -1,2 +1,30 @@
 .form {
+  &-control {
+    background-color: #1c1c1c;
+    border-radius: 0;
+    height: 3rem;
+    color: #ccc;
+    line-height: 2.15rem;
+  }
+
+  &-control::placeholder {
+    color: #ccc;
+  }
+
+  &-control-textarea {
+    min-height: 12rem !important;
+  }
+
+  &-select {
+    background-color: #1c1c1c;
+    border-radius: 0;
+    height: 3rem;
+    color: #ccc;
+  }
+
+  textarea,
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+  }
 }

@@ -1,0 +1,56 @@
+.contact {
+  &__image-wrapper {
+    max-width: 600px;
+  }
+
+  &__content {
+    max-width: 700px;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+  }
+
+  &__list-wrapper {
+    margin-top: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__list-title {
+    color: #5c3eb8;
+  }
+
+  &__list-item {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__title {
+      font-size: 6rem;
+    }
+
+    &__list-wrapper {
+      margin-top: 5rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,19 +1,19 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { GenreContext } from "../contexts/GenreContext";
 import { MediaContext } from "../contexts/MediaContext";
-import { Form } from "react-bootstrap";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 const Filters = (props) => {
   const { genres } = useContext(GenreContext);
-  const { filters, setFilters } = useContext(MediaContext);
+  const { setFilters } = useContext(MediaContext);
 
   return (
     <Container>
       <Form
-        className="my-4 px-4 pb-4 bg-light rounded"
+        className="form my-4 px-4 pb-4 bg-dark text-white"
         onSubmit={(e) => {
           e.preventDefault();
+
           const data = new FormData(e.target);
 
           setFilters((prev) => {
@@ -34,7 +34,7 @@ const Filters = (props) => {
               <Form.Control
                 type="text"
                 name="title"
-                placeholder="Search for a title"
+                placeholder="Search for a title..."
               />
             </Form.Group>
           </Col>
@@ -44,7 +44,7 @@ const Filters = (props) => {
               <Form.Control
                 type="text"
                 name="director"
-                placeholder="Search for a director"
+                placeholder="Search for a director..."
               />
             </Form.Group>
           </Col>
@@ -53,7 +53,7 @@ const Filters = (props) => {
               <Form.Label className="fw-bold fs-5">Genre</Form.Label>
               <Form.Select name="genre" defaultValue="">
                 <option value="" disabled hidden>
-                  select...
+                  Select a genre...
                 </option>
                 {genres.map((item) => {
                   return (
@@ -72,7 +72,7 @@ const Filters = (props) => {
               Apply filters
             </Button>
           </Col>
-          <Col sm={6} md={4} className="d-flex align-items-end mt-4">
+          <Col sm={6} md={4} className="d-flex align-items-end mt-2 mt-sm-4">
             <Button type="reset" variant="secondary" className="w-100">
               Reset filters
             </Button>

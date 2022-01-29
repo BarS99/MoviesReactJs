@@ -9,7 +9,7 @@ const Media = () => {
     <GenreProvider>
       <MediaProvider data="movies">
         <Filters />
-        <MediaList title="All movies" />
+        <MediaList title="All movies" titleAsH1={true} />
       </MediaProvider>
     </GenreProvider>
   );

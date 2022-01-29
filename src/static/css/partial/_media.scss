@@ -1,4 +1,12 @@
 .media {
+  background-color: transparent;
+  text-decoration: none;
+
+  .card-img {
+    border-radius: 0;
+    overflow: hidden;
+  }
+
   img {
     aspect-ratio: 500 / 792;
   }

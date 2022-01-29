@@ -6,8 +6,7 @@ import {
   faTicketAlt,
   faPhone,
   faTv,
-  faUser,
-  faCog,
+  faUpload,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -31,14 +30,9 @@ const Header = () => {
 
   const [nav] = useState([
     {
-      name: "My profile",
-      to: "/my-profile",
-      icon: faUser,
-    },
-    {
-      name: "Settings",
-      to: "/settings",
-      icon: faCog,
+      name: "Upload",
+      to: "/upload",
+      icon: faUpload,
     },
   ]);
 
@@ -51,7 +45,7 @@ const Header = () => {
     <header className="header position-sticky top-0 w-100">
       <Navbar collapseOnSelect expand="lg" bg="app-primary" variant="dark">
         <Container>
-          <Navbar.Brand as={NavLink} to="/" className="order-first">
+          <Navbar.Brand as={NavLink} to="/" className="order-first fw-bold">
             MoviesReactJS
           </Navbar.Brand>
 

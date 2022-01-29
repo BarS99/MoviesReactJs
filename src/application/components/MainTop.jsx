@@ -23,9 +23,9 @@ const MainTop = () => {
       </div>
       <div className="mainTop__content position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center">
         <Container>
-          <h2 className="mainTop__title text-light display-4 fw-bold">
+          <h1 className="mainTop__title text-light display-4 fw-bold">
             {mainTop.title}
-          </h2>
+          </h1>
           <a
             href={mainTop.link}
             title="See more"

@@ -9,7 +9,7 @@ const Series = () => {
     <GenreProvider>
       <MediaProvider data="series">
         <Filters />
-        <MediaList title="All series" />
+        <MediaList title="All series" titleAsH1={true} />
       </MediaProvider>
     </GenreProvider>
   );

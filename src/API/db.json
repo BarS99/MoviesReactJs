@@ -1,4 +1,48 @@
 {
+  "contact": [
+    {
+      "name": "Bartłomiej",
+      "email": "bartlomiejswiech99@gmail.com",
+      "message": "Breaking bad is awesome!",
+      "id": 1
+    },
+    {
+      "name": "John",
+      "email": "john@gmail.com",
+      "message": "Hello, how are you?",
+      "id": 2
+    },
+    {
+      "name": "Kelly",
+      "email": "kely@hotmail.com",
+      "message": "I love this website!",
+      "id": 3
+    },
+    {
+      "name": "Lilly",
+      "email": "lilly89@yahoo.com",
+      "message": "Aenean est diam, blandit at elementum in, consequat a orci. Pellentesque at leo ut diam finibus luctus. Fusce nulla turpis, sagittis ut leo ut, pulvinar commodo diam. Nam commodo ligula in lectus mattis venenatis. Proin semper est neque. Vivamus nulla est, viverra eu neque ac, pharetra auctor purus. In in neque sem. ",
+      "id": 4
+    },
+    {
+      "name": "John Smith",
+      "email": "john_smith@outlook.com",
+      "message": "How can I upload a movie?",
+      "id": 5
+    },
+    {
+      "name": "Bartłomiej Święch",
+      "email": "bartlomiejswiech99@gmail.com",
+      "message": "Hello. The movie \"Better Call Saul\" doesn't have any description. I guess you should fix that. Greetings!",
+      "id": 6
+    },
+    {
+      "name": "Batłomiej Święch",
+      "email": "i15.swiech@gmai.com",
+      "message": "This website is awesome!",
+      "id": 7
+    }
+  ],
   "genres": [
     {
       "id": 1,

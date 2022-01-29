@@ -5,6 +5,8 @@ import Index from "./application/pages/Index";
 import Page404 from "./application/pages/Page404";
 import Movies from "./application/pages/Movies";
 import Series from "./application/pages/Series";
+import Contact from "./application/pages/Contact";
+import MediaView from "./application/pages/MediaView";
 import { Spinner } from "react-bootstrap";
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
       });
 
       try {
-        const wait = await new Promise((resolve, reject) => {
+        await new Promise((resolve) => {
           setTimeout(() => {
             resolve();
           }, 500);
@@ -40,6 +42,8 @@ function App() {
           <Route path="" element={<Index />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/series" element={<Series />} />
+          <Route path="/media-view/:id" element={<MediaView />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
