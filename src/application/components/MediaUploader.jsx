@@ -75,7 +75,7 @@ const MediaUploader = () => {
 
   /** Upload a new media to the server
    * @param {Object} e Event object from the listener.
-   * @returns {Object} FormData object from the form.
+   * @param {Object} data FormData object from the form.
    */
   const uploadMedia = (e, data) => {
     e.preventDefault();

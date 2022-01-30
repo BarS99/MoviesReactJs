@@ -7,7 +7,7 @@ const Upload = () => {
   return (
     <>
       <h1 className="visually-hidden">MoviesReactJS - upload</h1>
-      <div className="my-5">
+      <div className="my-4 my-lg-5">
         <GenreProvider>
           <Container>
             <MediaUploader />

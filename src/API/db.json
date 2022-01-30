@@ -43,22 +43,10 @@
       "id": 7
     },
     {
-      "name": "Bartłomiej Święch",
-      "email": "bartlomiejswiech99@gmail.com",
-      "message": "React is awesome!",
+      "name": "Hello",
+      "email": "test@test.com",
+      "message": "I like this website!",
       "id": 8
-    },
-    {
-      "name": "Bartłomiej Święch",
-      "email": "bartlomiejswiech99@gmail.com",
-      "message": "Test",
-      "id": 9
-    },
-    {
-      "name": "Hey",
-      "email": "mrjohn@yahoo.com",
-      "message": "Hey. I like this website!",
-      "id": 10
     }
   ],
   "genres": [

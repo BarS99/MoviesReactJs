@@ -8,7 +8,7 @@ const Panel = () => {
   return (
     <>
       <h1 className="visually-hidden">MoviesReactJS - control panel</h1>
-      <div className="my-5">
+      <div className="my-4 my-lg-5">
         <MediaProvider data="movies">
           <Container>
             <MediaTable title="All movies" />
