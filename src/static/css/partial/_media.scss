@@ -2,12 +2,27 @@
   background-color: transparent;
   text-decoration: none;
 
-  .card-img {
+  &__image-wrapper {
     border-radius: 0;
     overflow: hidden;
   }
 
   img {
     aspect-ratio: 500 / 792;
+    object-fit: cover;
+  }
+
+  &-view__text {
+    text-align: justify;
+  }
+
+  &-view__list {
+    gap: 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    &-view__image-wrapper {
+      max-width: 50%;
+    }
   }
 }

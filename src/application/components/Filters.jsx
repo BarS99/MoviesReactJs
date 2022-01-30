@@ -9,76 +9,82 @@ const Filters = (props) => {
 
   return (
     <Container>
-      <Form
-        className="form my-4 px-4 pb-4 bg-dark text-white"
-        onSubmit={(e) => {
-          e.preventDefault();
+      <section className="my-4 px-4 pb-4 bg-dark text-white">
+        <h2 className="text-white fw-bold pt-4 mb-0 fs-2 pb-2 border-bottom border-white">
+          Filters
+        </h2>
+        <Form
+          className="form"
+          onSubmit={(e) => {
+            e.preventDefault();
 
-          const data = new FormData(e.target);
+            const data = new FormData(e.target);
 
-          setFilters((prev) => {
-            let filters = [...prev];
+            setFilters((prev) => {
+              let filters = [...prev];
 
-            for (const entries of data.entries()) {
-              filters[entries[0]] = entries[1];
-            }
+              for (const entries of data.entries()) {
+                filters[entries[0]] = entries[1];
+              }
 
-            return filters;
-          });
-        }}
-      >
-        <Row>
-          <Col sm={6} md={4} className="mt-4">
-            <Form.Group controlId="title">
-              <Form.Label className="fw-bold fs-5">Title</Form.Label>
-              <Form.Control
-                type="text"
-                name="title"
-                placeholder="Search for a title..."
-              />
-            </Form.Group>
-          </Col>
-          <Col sm={6} md={4} className="mt-4">
-            <Form.Group controlId="director">
-              <Form.Label className="fw-bold fs-5">Director</Form.Label>
-              <Form.Control
-                type="text"
-                name="director"
-                placeholder="Search for a director..."
-              />
-            </Form.Group>
-          </Col>
-          <Col sm={6} md={4} className="mt-4">
-            <Form.Group controlId="genre">
-              <Form.Label className="fw-bold fs-5">Genre</Form.Label>
-              <Form.Select name="genre" defaultValue="">
-                <option value="" disabled hidden>
-                  Select a genre...
-                </option>
-                {genres.map((item) => {
-                  return (
-                    <option key={item.id}>
-                      {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
-                    </option>
-                  );
-                })}
-              </Form.Select>
-            </Form.Group>
-          </Col>
-        </Row>
-        <Row className="justify-content-center">
-          <Col sm={6} md={4} className="d-flex align-items-end mt-4">
-            <Button type="submit" variant="danger" className="w-100">
-              Apply filters
-            </Button>
-          </Col>
-          <Col sm={6} md={4} className="d-flex align-items-end mt-2 mt-sm-4">
-            <Button type="reset" variant="secondary" className="w-100">
-              Reset filters
-            </Button>
-          </Col>
-        </Row>
-      </Form>
+              return filters;
+            });
+          }}
+        >
+          <Row>
+            <Col sm={6} md={4} className="mt-4">
+              <Form.Group controlId="title">
+                <Form.Label className="fw-bold fs-5">Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  placeholder="Search for a title..."
+                />
+              </Form.Group>
+            </Col>
+            <Col sm={6} md={4} className="mt-4">
+              <Form.Group controlId="director">
+                <Form.Label className="fw-bold fs-5">Director</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="director"
+                  placeholder="Search for a director..."
+                />
+              </Form.Group>
+            </Col>
+            <Col sm={6} md={4} className="mt-4">
+              <Form.Group controlId="genre">
+                <Form.Label className="fw-bold fs-5">Genre</Form.Label>
+                <Form.Select name="genre" defaultValue="">
+                  <option value="" disabled hidden>
+                    Select a genre...
+                  </option>
+                  {genres.map((item) => {
+                    return (
+                      <option key={item.id}>
+                        {item.title.charAt(0).toUpperCase() +
+                          item.title.slice(1)}
+                      </option>
+                    );
+                  })}
+                </Form.Select>
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col sm={6} md={4} className="d-flex align-items-end mt-4">
+              <Button type="submit" variant="danger" className="w-100">
+                Apply filters
+              </Button>
+            </Col>
+            <Col sm={6} md={4} className="d-flex align-items-end mt-2 mt-sm-4">
+              <Button type="reset" variant="secondary" className="w-100">
+                Reset filters
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </section>
     </Container>
   );
 };

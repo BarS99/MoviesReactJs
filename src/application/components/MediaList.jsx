@@ -4,17 +4,12 @@ import Media from "./Media";
 import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
 
 const MediaList = (props) => {
-  const { media, loadFailed, isLoading } = useContext(MediaContext);
+  const { data, media, loadFailed, isLoading } = useContext(MediaContext);
 
   return (
     <Container className="container my-4">
       <section className="movie__section">
-        {props.titleAsH1 ? (
-          <h1 className="text-white fw-bold mb-4 fs-2">{props.title}</h1>
-        ) : (
-          <h2 className="text-white fw-bold mb-4 fs-2">{props.title}</h2>
-        )}
-
+        <h2 className="text-white fw-bold mb-4 fs-2">{props.title}</h2>
         {isLoading ? (
           <div className="d-flex justify-content-center">
             <Spinner animation="border" variant="white" />
@@ -30,7 +25,7 @@ const MediaList = (props) => {
                 {media.map((item) => {
                   return (
                     <Col xs="6" md="4" lg="3" className="d-flex" key={item.id}>
-                      <Media media={item} />
+                      <Media media={item} data={data} />
                     </Col>
                   );
                 })}

@@ -13,7 +13,7 @@ const Description = () => {
             srcSet={`${team600} 600w, ${team1200} 1200w`}
             sizes="(min-width: 577px) 1200w, 600w"
             src={team1200}
-            alt="Group of people"
+            alt="Group of working people"
             className="d-block img-fluid"
           />
         </div>

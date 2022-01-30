@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTicketAlt,
   faPhone,
   faTv,
+  faWrench,
   faUpload,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,6 +32,11 @@ const Header = () => {
 
   const [nav] = useState([
     {
+      name: "Control panel",
+      to: "/panel",
+      icon: faWrench,
+    },
+    {
       name: "Upload",
       to: "/upload",
       icon: faUpload,
@@ -41,9 +48,24 @@ const Header = () => {
     name: "Thomas Shelby",
   });
 
+  const [navExpanded, setNavExpanded] = useState(true);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setNavExpanded(() => {
+      return false;
+    });
+  }, [navigate]);
+
   return (
     <header className="header position-sticky top-0 w-100">
-      <Navbar collapseOnSelect expand="lg" bg="app-primary" variant="dark">
+      <Navbar
+        expand="lg"
+        bg="app-primary"
+        variant="dark"
+        expanded={navExpanded}
+      >
         <Container>
           <Navbar.Brand as={NavLink} to="/" className="order-first fw-bold">
             MoviesReactJS
@@ -76,6 +98,11 @@ const Header = () => {
             <Navbar.Toggle
               aria-controls="responsive-navbar-nav"
               className="ms-3"
+              onClick={() =>
+                setNavExpanded(() => {
+                  return navExpanded ? false : "expanded";
+                })
+              }
             />
           </Nav>
 

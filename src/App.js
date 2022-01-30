@@ -7,6 +7,8 @@ import Movies from "./application/pages/Movies";
 import Series from "./application/pages/Series";
 import Contact from "./application/pages/Contact";
 import MediaView from "./application/pages/MediaView";
+import Panel from "./application/pages/Panel";
+import Upload from "./application/pages/Upload";
 import { Spinner } from "react-bootstrap";
 
 function App() {
@@ -42,8 +44,17 @@ function App() {
           <Route path="" element={<Index />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/series" element={<Series />} />
-          <Route path="/media-view/:id" element={<MediaView />} />
+          <Route
+            path="/movies-view/:id"
+            element={<MediaView data="movies" />}
+          />
+          <Route
+            path="/series-view/:id"
+            element={<MediaView data="series" />}
+          />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/panel" element={<Panel />} />
+          <Route path="/upload" element={<Upload />} />
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>

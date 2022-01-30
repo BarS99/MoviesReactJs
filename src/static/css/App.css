@@ -84,12 +84,24 @@ body {
   background-color: transparent;
   text-decoration: none;
 }
-.media .card-img {
+.media__image-wrapper {
   border-radius: 0;
   overflow: hidden;
 }
 .media img {
   aspect-ratio: 500/792;
+  object-fit: cover;
+}
+.media-view__text {
+  text-align: justify;
+}
+.media-view__list {
+  gap: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .media-view__image-wrapper {
+    max-width: 50%;
+  }
 }
 
 .horizontal-image {

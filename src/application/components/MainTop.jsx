@@ -23,13 +23,15 @@ const MainTop = () => {
       </div>
       <div className="mainTop__content position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center">
         <Container>
-          <h1 className="mainTop__title text-light display-4 fw-bold">
+          <h2 className="mainTop__title text-light display-4 fw-bold">
             {mainTop.title}
-          </h1>
+          </h2>
           <a
             href={mainTop.link}
             title="See more"
             className="btn btn-lg btn-contrast mt-4"
+            target="_blank"
+            rel="nofollow, noreferrer"
           >
             See more
           </a>

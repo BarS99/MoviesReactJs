@@ -52,7 +52,7 @@ export const MediaProvider = (props) => {
                 break;
               case "genre":
                 response = response.filter((item) => {
-                  return item.genres.includes(filters[filter].toLowerCase());
+                  return item.genre.includes(filters[filter].toLowerCase());
                 });
                 break;
               default:
@@ -84,7 +84,15 @@ export const MediaProvider = (props) => {
 
   return (
     <MediaContext.Provider
-      value={{ media, loadFailed, isLoading, filters, setFilters }}
+      value={{
+        data,
+        media,
+        setMedia,
+        loadFailed,
+        isLoading,
+        filters,
+        setFilters,
+      }}
     >
       {props.children}
     </MediaContext.Provider>

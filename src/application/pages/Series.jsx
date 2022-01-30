@@ -8,8 +8,9 @@ const Series = () => {
   return (
     <GenreProvider>
       <MediaProvider data="series">
+        <h1 className="visually-hidden">MoviesReactJS - series</h1>
         <Filters />
-        <MediaList title="All series" titleAsH1={true} />
+        <MediaList title="Searched series" />
       </MediaProvider>
     </GenreProvider>
   );
